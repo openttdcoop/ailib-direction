@@ -169,7 +169,7 @@ class Direction
 	static function GetAllDirsInRandomOrder()
 	{
 	    local dir_list = AIList();
-	    for(local dir = Direction.DIR_FIRST; dir != Direction.DIR_LAST + 1; dir++)
+	    for(local dir = _dir_int.DIR_FIRST; dir != _dir_int.DIR_LAST + 1; dir++)
 	    {
 	        dir_list.AddItem(dir, AIBase.Rand());
 	    }
@@ -185,7 +185,7 @@ class Direction
 	{
 	    local dir_list = AIList();
 	    local idir = import("AILib.Direction","",1);
-	    for(local dir = _dir_int.DIR_FIRST; dir != _dir_int.DIR_LAST + 1; dir++)
+	    for(local dir = idir.DIR_FIRST; dir != idir.DIR_LAST + 1; dir++)
 	    {
 	        if(!idir.IsMainDir(dir)) continue;
 	        dir_list.AddItem(dir, AIBase.Rand());
