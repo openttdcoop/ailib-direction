@@ -72,13 +72,6 @@ class Direction
     ///Used to turn dir anti clockwise
     static ANTI_CLOCKWISE = -1;
     
-    //////////////////////////////////////////////////////////////////////
-	//                                                                  //
-	//  To string                                                       //
-	//                                                                  //
-	//////////////////////////////////////////////////////////////////////
-	    
-    
     /**
 	 * Translates a direction value into a human readable string that
 	 * can be used for logging.
@@ -110,12 +103,6 @@ class Direction
 	        return -1;
 	    }
 	}
-	
-	//////////////////////////////////////////////////////////////////////
-	//                                                                  //
-	//  Classification of direction                                     //
-	//                                                                  //
-	//////////////////////////////////////////////////////////////////////
 	
 	/**
 	 * Check if dir is main direction (NW, SW, SE or NE)
@@ -155,12 +142,6 @@ class Direction
 	    }
 	}
 
-	//////////////////////////////////////////////////////////////////////
-	//                                                                  //
-	//  List of directions                                              //
-	//                                                                  //
-	//////////////////////////////////////////////////////////////////////
-	
 	/**
 	 * Get all 8 direction as AIList
 	 * @param dir direction
@@ -209,12 +190,6 @@ class Direction
 	    }
 	    return dir_list;
 	}
-	
-	//////////////////////////////////////////////////////////////////////
-	//                                                                  //
-	//  Get direction between tiles                                     //
-	//                                                                  //
-	//////////////////////////////////////////////////////////////////////
 	
 	/* If these function fails they return Direction.DIR_INVALID */
 	
@@ -311,13 +286,7 @@ class Direction
 		// Error
 		return _dir_int.DIR_INVALID
 	}
-
-	//////////////////////////////////////////////////////////////////////
-	//                                                                  //
-	//  Turn Direction                                                  //
-	//                                                                  //
-	//////////////////////////////////////////////////////////////////////
-	
+		
 	/**
 	 * Turn direction
 	 * @param dir Current direction
