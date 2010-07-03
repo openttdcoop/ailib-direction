@@ -23,6 +23,7 @@ class LibDirection extends AILibrary {
 	function GetShortName()   { return "CLDF"; }
 	function GetDescription() { return "A collection of direction functions"; }
 	function GetVersion()     { return 1; }
+	function GetAPIVersion()  { return "1.0"; }
 	function GetDate()        { return "2010-06-06"; }
 	function CreateInstance() { return "Direction"; }
 	function GetCategory()    { return "AILib"; }
