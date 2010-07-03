@@ -1,4 +1,13 @@
 /*
+	Note :
+	* Special thanks goes to Leif Linse (Zuu), who had originally written these codes.
+	* This library should be compatible with SuperLib.Direction
+	* The biggest difference (interface) was on "Turn" function.
+	* You could see in the last few line, about how to do "Turn"
+	  as same way as SuperLib.Direction Turn
+*/
+
+/*
 	This file is part of AI Library - Direction
 	Copyright (C) 2010  OpenTTD NoAI Community
 
