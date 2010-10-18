@@ -17,7 +17,8 @@
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-class LibDirection extends AILibrary {
+class LibDirection extends AILibrary
+{
 	function GetAuthor()      { return "OpenTTD NoAI Community"; }
 	function GetName()        { return "Direction"; }
 	function GetShortName()   { return "CLDF"; }

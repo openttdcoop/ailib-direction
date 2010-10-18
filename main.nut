@@ -108,7 +108,7 @@ class Direction
 	 * @return String of direction
 	 */
 	static function GetDirString(dir) {
-		switch(dir) {
+		switch (dir) {
 			case _dir_int.DIR_N:  return "N";
 			case _dir_int.DIR_NE: return "NE";
 			case _dir_int.DIR_E:  return "E";
@@ -118,7 +118,7 @@ class Direction
 			case _dir_int.DIR_W:  return "W";
 			case _dir_int.DIR_NW: return "NW";
 			default:
-				throw ("Direction::GetDirString: invalid direction: " + dir);
+				throw("Direction::GetDirString: invalid direction: " + dir);
 				return -1;
 		}
 	}
@@ -129,7 +129,7 @@ class Direction
 	 * @return true if the direction is a main direction
 	 */
 	static function IsMainDir(dir) {
-		switch(dir) {
+		switch (dir) {
 				/* fall through */
 			case _dir_int.DIR_NE:
 			case _dir_int.DIR_SE:
@@ -147,7 +147,7 @@ class Direction
 	 * @return true if the direction is a diagonal direction
 	 */
 	static function IsDiagonalDir(dir) {
-		switch(dir) {
+		switch (dir) {
 				/* fall through */
 			case _dir_int.DIR_N:
 			case _dir_int.DIR_E:
@@ -166,7 +166,7 @@ class Direction
 	 */
 	static function GetAllDirsInRandomOrder() {
 		local dir_list = AIList();
-		for(local dir = _dir_int.DIR_FIRST; dir != _dir_int.DIR_LAST + 1; dir++) {
+		for (local dir = _dir_int.DIR_FIRST; dir != _dir_int.DIR_LAST + 1; dir++) {
 			dir_list.AddItem(dir, AIBase.Rand());
 		}
 		return dir_list;
@@ -180,8 +180,8 @@ class Direction
 	static function GetMainDirsInRandomOrder() {
 		local dir_list = AIList();
 		local idir = import("AILib.Direction", "", 1);
-		for(local dir = idir.DIR_FIRST; dir != idir.DIR_LAST + 1; dir++) {
-			if(!idir.IsMainDir(dir)) continue;
+		for (local dir = idir.DIR_FIRST; dir != idir.DIR_LAST + 1; dir++) {
+			if (!idir.IsMainDir(dir)) continue;
 			dir_list.AddItem(dir, AIBase.Rand());
 		}
 		return dir_list;
@@ -195,8 +195,8 @@ class Direction
 	static function GetDiagonalDirsInRandomOrder() {
 		local dir_list = AIList();
 		local idir = import("AILib.Direction", "", 1);
-		for(local dir = idir.DIR_FIRST; dir != idir.DIR_LAST + 1; dir++) {
-			if(!idir.IsDiagonalDir(dir)) continue;
+		for (local dir = idir.DIR_FIRST; dir != idir.DIR_LAST + 1; dir++) {
+			if (!idir.IsDiagonalDir(dir)) continue;
 			dir_list.AddItem(dir, AIBase.Rand());
 		}
 		return dir_list;
@@ -216,21 +216,21 @@ class Direction
 		local rel_y = AIMap.GetTileY(adjacent_tile) - AIMap.GetTileY(tile);
 
 		local rel_dir = [
-			[_dir_int.DIR_N, [-1, -1]],
-			[_dir_int.DIR_NE, [-1,  0]],
-			[_dir_int.DIR_E,  [-1,  1]],
-			[_dir_int.DIR_SE, [ 0,  1]],
-			[_dir_int.DIR_S,  [ 1,  1]],
-			[_dir_int.DIR_SW, [ 1,  0]],
-			[_dir_int.DIR_W,  [ 1, -1]],
-			[_dir_int.DIR_NW, [ 0, -1]]
-		];
+							[_dir_int.DIR_N, [-1, -1]],
+							[_dir_int.DIR_NE, [-1,  0]],
+							[_dir_int.DIR_E,  [-1,  1]],
+							[_dir_int.DIR_SE, [ 0,  1]],
+							[_dir_int.DIR_S,  [ 1,  1]],
+							[_dir_int.DIR_SW, [ 1,  0]],
+							[_dir_int.DIR_W,  [ 1, -1]],
+							[_dir_int.DIR_NW, [ 0, -1]]
+						];
 
 		foreach(dir in rel_dir) {
 			local rel = dir[1];
 			local X = 0;
 			local Y = 1;
-			if(rel[X] == rel_x && rel[Y] == rel_y) return dir[0];
+			if (rel[X] == rel_x && rel[Y] == rel_y) return dir[0];
 		}
 
 		return _dir_int.DIR_INVALID;
@@ -250,7 +250,7 @@ class Direction
 	static function GetDirectionToTile(tile1, tile2) {
 		local rel_x = AIMap.GetTileX(tile2) - AIMap.GetTileX(tile1);
 		local rel_y = AIMap.GetTileY(tile2) - AIMap.GetTileY(tile1);
-		if(rel_x == 0 && rel_y == 0) {
+		if (rel_x == 0 && rel_y == 0) {
 			return _dir_int.DIR_INVALID;
 		} else if (abs(rel_x) >= 1 && abs(rel_y) >= 1) {
 			// Neither of NE, NW, SW, SE
@@ -294,7 +294,7 @@ class Direction
 		if (new_dir > _dir_int.DIR_LAST) {
 			new_dir = new_dir % delta_dir;
 		} else {
-			while(new_dir < _dir_int.DIR_FIRST) {
+			while (new_dir < _dir_int.DIR_FIRST) {
 				new_dir += delta_dir;
 			}
 		}
