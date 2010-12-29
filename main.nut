@@ -26,7 +26,9 @@
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-print("Using AILib.Direction version 1");
+require("version.nut");
+
+print("Using AILib.Direction version " + revision);
 print("Author           : OpenTTD NoAI Community");
 print("License          : GPL version 2.0");
 print("Original coder   : Leif Linse (Zuu)");

@@ -17,13 +17,15 @@
 	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+require("version.nut");
+
 class LibDirection extends AILibrary
 {
 	function GetAuthor()      { return "OpenTTD NoAI Community"; }
 	function GetName()        { return "Direction"; }
 	function GetShortName()   { return "CLDF"; }
 	function GetDescription() { return "A collection of direction functions"; }
-	function GetVersion()     { return 1; }
+	function GetVersion()     { return revision; }
 	function GetAPIVersion()  { return "1.0"; }
 	function GetDate()        { return "2010-06-06"; }
 	function CreateInstance() { return "Direction"; }
