@@ -24,8 +24,8 @@ class LibDirection extends AILibrary
 	function GetAuthor()      { return "OpenTTD NoAI Community"; }
 	function GetName()        { return "Direction"; }
 	function GetShortName()   { return "CLDF"; }
-	function GetDescription() { return "A collection of direction functions"; }
-	function GetVersion()     { return revision; }
+	function GetDescription() { return "A collection of direction functions. Rev:" + revision; }
+	function GetVersion()     { return version; }
 	function GetAPIVersion()  { return "1.0"; }
 	function GetDate()        { return "2010-06-06"; }
 	function CreateInstance() { return "Direction"; }

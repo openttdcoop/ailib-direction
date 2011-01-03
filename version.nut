@@ -18,7 +18,8 @@
 */
 
 /*
-	This file would only be used when you wan to use the library directly from
-	repository. Use 'make' to get the actual revision number
+	Theese number would only be needed when you wan to use this library directly from
+	repository. Use 'make' to get the actual version/revision number
 */
-revision  <- 1
+version   <- 10000;
+revision  <- 0;
